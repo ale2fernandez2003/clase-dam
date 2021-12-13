@@ -6,7 +6,6 @@ public class Alumno {
     private String numeroMatricula;
     // la edad del alumno
     private int edad;
-
     /**
      * Crea un alumno nuevo
      */
@@ -14,6 +13,13 @@ public class Alumno {
         nombre = nombreCompleto;
         numeroMatricula = numeroMatriculaAlumno;
         edad = edadAlumno;
+        if (nombre.length()<3) {
+            System.out.println("error la palabra debe tener mas de 3 caracteres");
+        }
+        
+        if (numeroMatricula.length()<4){
+            System.out.println("error la matricula debe tener mas de 4 numeros");
+        }
     }
 
     /**
