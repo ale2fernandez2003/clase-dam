@@ -47,7 +47,24 @@ public class Alumno {
      * Devuelve el nombre de usuario que el alumno debe configurar
      * en su cuenta de Github en formato de 7 caracateres
      */
-    public String getNombreUsuarioGithub(int beginIndex, int endIndex) {
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+    public String getNombreUsuarioGithub() {
+        String resultado = "";
+        String resultadoNombre = "";
+        String resultadoMatricula = "";
+        if (nombre.length()<=3){
+            resultadoNombre = nombre;
+        }
+        else{
+            resultadoNombre = nombre.substring(0,3);
+        }
+        
+        if (numeroMatricula.length()<=4){
+            resultadoMatricula = numeroMatricula;
+        }
+        else{
+            resultadoMatricula = numeroMatricula.substring(0,4);
+        }
+        resultado = resultadoNombre + resultadoMatricula;
+        return resultado;
     }
 }
